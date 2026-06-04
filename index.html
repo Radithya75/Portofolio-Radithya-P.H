@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Radithya Putra Haryanto</title>
+    <link rel="icon" type="image/png" href="img/Head_img.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              darkBg: "#09090b",
+              cardBg: "#121214",
+              accentPurp: "#6366f1",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-card {
+        background: rgba(24, 24, 27, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .glass-badge {
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+      }
+      section {
+        scroll-margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-darkBg text-zinc-100 font-sans antialiased selection:bg-indigo-500 selection:text-white"
+  >
+    <header
+      class="w-full sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="img/RCreativity_Logo.png"
+            alt="Logo Radithya"
+            class="h-8 w-auto object-contain"
+          />
+        </div>
+
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm text-zinc-400 font-medium"
+        >
+          <a
+            href="#about"
+            class="hover:text-white transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="hover:text-white transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+            >Skills</a
+          >
+          <a
+            href="#work"
+            class="hover:text-white transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+            >Work</a
+          >
+          <a
+            href="https://api.whatsapp.com/send/?phone=6283879385189&text=Hallo&type=phone_number&app_absent=0"
+            target="_blank"
+            class="hover:text-white transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+            >Contact Me</a
+          >
+        </nav>
+
+        <button
+          onclick="
+            window.open(
+              'mailto:alamat-emailmu@gmail.com?subject=Tanya%20Project&body=Halo%20Radithya,',
+            )
+          "
+          class="hidden md:flex glass-card hover:bg-zinc-800 text-white text-sm font-medium px-4 py-2.5 rounded-full items-center gap-2 transition border border-zinc-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.92V6.75"
+            />
+          </svg>
+          Get in Touch
+        </button>
+
+        <button
+          id="menu-btn"
+          class="block md:hidden text-zinc-400 hover:text-white focus:outline-none z-50 p-2 rounded-lg transition relative"
+          aria-label="Toggle Menu"
+        >
+          <svg
+            id="hamburger-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            id="close-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-6 h-6 hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="hidden fixed inset-0 bg-darkBg/98 backdrop-blur-2xl z-40 flex flex-col justify-center items-center px-8 overflow-y-auto"
+    >
+      <div class="w-full max-w-sm flex flex-col space-y-6 text-center">
+        <a
+          href="#about"
+          class="mobile-link text-2xl font-semibold text-zinc-300 hover:text-white transition py-3 border-b border-zinc-800/60"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link text-2xl font-semibold text-zinc-300 hover:text-white transition py-3 border-b border-zinc-800/60"
+          >Skills</a
+        >
+        <a
+          href="#work"
+          class="mobile-link text-2xl font-semibold text-zinc-300 hover:text-white transition py-3 border-b border-zinc-800/60"
+          >Work</a
+        >
+        <a
+          href="https://api.whatsapp.com/send/?phone=6283879385189&text=Hallo&type=phone_number&app_absent=0"
+          target="_blank"
+          class="mobile-link text-2xl font-semibold text-zinc-300 hover:text-white transition py-3 border-b border-zinc-800/60"
+          >Contact Me</a
+        >
+
+        <button
+          onclick="
+            window.open(
+              'mailto:alamat-emailmu@gmail.com?subject=Tanya%20Project&body=Halo%20Radithya,',
+            )
+          "
+          class="w-full glass-card hover:bg-zinc-800 text-white text-base font-medium py-4 rounded-full flex items-center justify-center gap-2 transition border border-zinc-800 mt-6"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.92V6.75"
+            />
+          </svg>
+          Get in Touch
+        </button>
+      </div>
+    </div>
+
+    <main class="w-full relative z-10">
+      <section class="w-full bg-darkBg py-20 md:py-28">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        >
+          <div class="lg:col-span-7 space-y-8">
+            <div
+              class="inline-flex items-center gap-2 text-xs font-medium text-indigo-400 glass-badge px-3 py-1.5 rounded-full w-fit"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"
+              ></span>
+              Available for Works
+            </div>
+
+            <h1
+              class="text-5xl md:text-7xl font-bold tracking-tight text-white leading-none"
+            >
+              Radithya Putra Haryanto,<br />
+              <span class="text-zinc-500">Digital</span> Creative.
+            </h1>
+
+            <p
+              class="text-zinc-400 text-lg md:text-xl max-w-xl font-normal leading-relaxed"
+            >
+              Menggabungkan kreativitas desain, strategi digital marketing, dan
+              teknologi web untuk menciptakan pengalaman digital yang menarik
+              dan efektif.
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a
+                href="https://api.whatsapp.com/send/?phone=6283879385189&text=Hallo&type=phone_number&app_absent=0"
+                target="_blank"
+                class="bg-white text-black hover:bg-zinc-200 text-sm font-semibold px-6 py-3.5 rounded-full flex items-center gap-2 transition shadow-lg w-fit"
+              >
+                Contact Me
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-5 text-zinc-500 pt-6">
+              <a
+                href="https://www.instagram.com/reinn_75/"
+                target="_blank"
+                class="hover:text-white transition"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/radith-haryanto-575044329/"
+                class="hover:text-white transition"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="hover:text-white transition">
+                <svg
+                  class="w-5 h-5 fill-none stroke-current"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20M2 12h20" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative group">
+            <div
+              class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-zinc-800 border border-zinc-700 relative cursor-pointer"
+            >
+              <img
+                src="img/Radithya.jpg"
+                alt="Radithya Putra Haryanto"
+                class="w-full h-full object-cover grayscale transition duration-500 ease-in-out group-hover:grayscale-0 contrast-125"
+              />
+              <div
+                class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl flex justify-between items-center"
+              >
+                <div>
+                  <p class="text-sm font-bold text-white">Radithya P.H.</p>
+                  <p class="text-[10px] uppercase tracking-wider text-zinc-400">
+                    Digital Creative
+                  </p>
+                </div>
+                <div class="text-indigo-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.813 15.904 9 21l8.982-8.983m-1.985-3.404L17 3.5l-8.983 8.983m0 0 1.032 3.422M9.813 15.904 3 9l8.983-8.983m0 0 1.032 3.422M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="w-full bg-cardBg py-24 border-t border-white/10"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8"
+        >
+          <div class="lg:col-span-7 space-y-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white">
+              About Me
+            </h2>
+            <p
+              class="text-zinc-400 text-base md:text-lg leading-relaxed font-normal"
+            >
+              Saya adalah seorang individu yang bergerak di persimpangan desain,
+              teknologi, dan pemasaran digital. Dengan pengalaman magang selama
+              6 bulan sebagai Digital Marketer & Graphic Designer, saya aktif
+              dalam pembuatan konten visual, manajemen media sosial, e-commerce,
+              hingga pengelolaan website berbasis WordPress.
+            </p>
+
+            <p
+              class="text-zinc-400 text-base md:text-lg leading-relaxed font-normal"
+            >
+              Kemampuan desain saya didukung oleh keahlian menggunakan Adobe
+              Illustrator, Photoshop, dan Premiere Pro. Selain itu, saya juga
+              memiliki kompetensi pengembangan web formal melalui Sertifikasi
+              BNSP, di mana saya berhasil merancang UI di Figma dan
+              mengimplementasikannya menggunakan PHP serta JavaScript.
+            </p>
+
+            <p
+              class="text-zinc-400 text-base md:text-lg leading-relaxed font-normal"
+            >
+              Saya beradaptasi dengan cepat terhadap perkembangan teknologi dan
+              selalu fokus pada karya yang estetis sekaligus bernilai guna.
+              Tujuan saya ke depan adalah berkembang menjadi profesional yang
+              siap memimpin tim kreatif dan menghadirkan solusi digital yang
+              inovatif.
+            </p>
+          </div>
+
+          <div
+            class="lg:col-span-5 glass-card p-8 rounded-3xl flex flex-col justify-between gap-8"
+          >
+            <div>
+              <h3
+                class="font-bold text-white mb-4 text-sm tracking-wide uppercase text-zinc-400"
+              >
+                My Values
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-zinc-900 border border-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full font-medium"
+                  >Creativity</span
+                >
+                <span
+                  class="text-xs bg-zinc-900 border border-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full font-medium"
+                  >Adaptability</span
+                >
+                <span
+                  class="text-xs bg-zinc-900 border border-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full font-medium"
+                  >Continuous Learning</span
+                >
+                <span
+                  class="text-xs bg-zinc-900 border border-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full font-medium"
+                  >Initiative</span
+                >
+                <span
+                  class="text-xs bg-zinc-900 border border-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full font-medium"
+                  >Growth Mindset</span
+                >
+              </div>
+            </div>
+
+            <div class="border-t border-zinc-800/80 pt-6">
+              <h3
+                class="font-bold text-white mb-4 text-sm tracking-wide uppercase text-zinc-400"
+              >
+                Specialities
+              </h3>
+              <ul class="space-y-4 text-sm text-zinc-400">
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-4 h-4 text-zinc-500"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                  Graphic Design
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-4 h-4 text-zinc-500"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                  UI Design
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-4 h-4 text-zinc-500"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                    />
+                  </svg>
+                  Digital Marketing
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="w-full bg-darkBg py-24 border-t border-white/10"
+      >
+        <div class="max-w-7xl mx-auto px-6 space-y-8">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+          >
+            <div>
+              <h2 class="text-3xl font-bold tracking-tight text-white">
+                Expertise & Stack
+              </h2>
+              <p class="text-zinc-400 text-sm mt-1">
+                Beberapa tools yang sering saya gunakan untuk berkarya.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card p-6 rounded-2xl space-y-6">
+              <div class="flex items-center gap-3 text-white font-bold text-sm">
+                <svg
+                  class="w-5 h-5 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                  />
+                </svg>
+                Coding
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Html.png"
+                      alt="HTML"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs">HTML</span>
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/css.png"
+                      alt="CSS"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs">CSS</span>
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Js.png"
+                      alt="JavaScript"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs"
+                    >JavaScript</span
+                  >
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/php.png"
+                      alt="PHP"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs">PHP</span>
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Github.png"
+                      alt="GitHub"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs">GitHub</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl space-y-6">
+              <div class="flex items-center gap-3 text-white font-bold text-sm">
+                <svg
+                  class="w-5 h-5 text-pink-400"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                  />
+                </svg>
+                Design & Editing
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Ps.png"
+                      alt="Adobe Photoshop"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs"
+                    >Adobe Photoshop</span
+                  >
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Ai.png"
+                      alt="Adobe Illustrator"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs"
+                    >Adobe Illustrator</span
+                  >
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Pr.png"
+                      alt="Adobe Premiere"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs"
+                    >Adobe Premiere</span
+                  >
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Canva.png"
+                      alt="Canva"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs">Canva</span>
+                </div>
+                <div
+                  class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-800/80 flex flex-col items-center justify-center gap-2 hover:bg-zinc-800/40 transition"
+                >
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <img
+                      src="img/Figma.png"
+                      alt="Figma"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span class="font-bold text-zinc-300 text-xs">Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="work"
+        class="w-full bg-cardBg py-24 border-t border-white/10"
+      >
+        <div class="max-w-7xl mx-auto px-6 space-y-8">
+          <h2 class="text-3xl font-bold tracking-tight text-white">Works</h2>
+
+          <div class="space-y-6">
+            <div
+              class="glass-card rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 group"
+            >
+              <div
+                class="p-8 md:p-12 flex flex-col justify-between space-y-8 lg:order-1"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="text-xs uppercase tracking-wider font-bold text-indigo-400 flex items-center gap-2"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                    Graphic Design
+                  </div>
+
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+                  >
+                    Company Calendar Design
+                  </h3>
+
+                  <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
+                    Mendesain kalender perusahaan untuk kebutuhan branding dan
+                    promosi. Menggunakan Adobe Illustrator dan Photoshop untuk
+                    menghasilkan desain yang sesuai identitas visual perusahaan.
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Illustrator</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Photoshop</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Print Design</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-zinc-900 min-h-[300px] lg:h-full relative overflow-hidden lg:order-2"
+              >
+                <img
+                  src="img/Company_Calender_Design.jpg"
+                  alt="Calendar Design"
+                  class="w-full h-full object-cover grayscale opacity-60 transition duration-500 ease-in-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            <div
+              class="glass-card rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 group"
+            >
+              <div
+                class="p-8 md:p-12 flex flex-col justify-between space-y-8 lg:order-2"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="text-xs uppercase tracking-wider font-bold text-purple-400 flex items-center gap-2"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                    Digital Marketing
+                  </div>
+
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+                  >
+                    Social Media Design
+                  </h3>
+
+                  <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
+                    Membuat dan mengelola konten media sosial perusahaan, mulai
+                    dari desain visual hingga penjadwalan posting menggunakan
+                    Meta Business Suite untuk meningkatkan engagement dan
+                    branding perusahaan.
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Meta Ads</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Content Design</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Digital Marketing</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-zinc-900 min-h-[300px] lg:h-full relative overflow-hidden lg:order-1"
+              >
+                <img
+                  src="img/Social_Media_Design.jpg"
+                  alt="Social Media Content"
+                  class="w-full h-full object-cover grayscale opacity-60 transition duration-500 ease-in-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            <div
+              class="glass-card rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 group"
+            >
+              <div
+                class="p-8 md:p-12 flex flex-col justify-between space-y-8 lg:order-1"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="text-xs uppercase tracking-wider font-bold text-green-400 flex items-center gap-2"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                    E-Catalogue Design
+                  </div>
+
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+                  >
+                    Product Catalogue Design
+                  </h3>
+
+                  <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
+                    Mengembangkan desain katalog produk yang membantu
+                    penyampaian informasi produk secara visual dan mendukung
+                    kebutuhan pemasaran perusahaan.
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Layout Design</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Branding</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Product Overview</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-zinc-900 min-h-[300px] lg:h-full relative overflow-hidden lg:order-2"
+              >
+                <img
+                  src="img/Catalogue_Design.jpg"
+                  alt="E-Catalogue"
+                  class="w-full h-full object-cover grayscale opacity-60 transition duration-500 ease-in-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            <div
+              class="glass-card rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 group"
+            >
+              <div
+                class="p-8 md:p-12 flex flex-col justify-between space-y-8 lg:order-2"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="text-xs uppercase tracking-wider font-bold text-yellow-400 flex items-center gap-2"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                    Certification
+                  </div>
+
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+                  >
+                    BNSP Junior Web Developer
+                  </h3>
+
+                  <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
+                    Merancang UI menggunakan Figma kemudian
+                    mengimplementasikannya menjadi website menggunakan HTML,
+                    CSS, PHP, dan JavaScript sebagai bagian dari uji kompetensi
+                    BNSP hingga memperoleh sertifikat kompetensi.
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >Figma</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >PHP</span
+                    >
+                    <span
+                      class="text-[10px] uppercase font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded"
+                      >JavaScript</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-zinc-900 min-h-[300px] lg:h-full relative overflow-hidden lg:order-1"
+              >
+                <img
+                  src="img/BNSP_web_dev.jpg"
+                  alt="BNSP Certification"
+                  class="w-full h-full object-cover grayscale opacity-60 transition duration-500 ease-in-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="w-full border-t border-white/10 bg-[#09090b] py-12 text-center text-xs text-zinc-600 relative z-20"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <p>&copy; 2026 Radithya Putra Haryanto. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle("hidden");
+        hamburgerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+
+        if (!mobileMenu.classList.contains("hidden")) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "";
+        }
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          hamburgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>
